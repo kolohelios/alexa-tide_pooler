@@ -3,9 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "scripts": {
+    "zip": "zip -r hello-alexa.zip index.js package.json .env node_modules",
+    "test": "lambda-local -l index.js -h handler -e event-sample.js"
+  },
   "dependencies": {
     "alexa-sdk": "^1.0.5",
     "dotenv": "^2.0.0",
     "node-lambda": "^0.8.9"
+  },
+  "devDependencies": {
+    "lambda-local": "^1.4.2"
   }
 }
